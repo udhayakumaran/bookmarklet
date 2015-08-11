@@ -29,7 +29,7 @@
     this.firstname = chance.first() . substring(0,6);
     this.lastname  = chance.last() . substring(0,6);
 
-    this.username   = this.firstname + this.lastname;
+    this.username   = (this.firstname + this.lastname).toLowerCase();
     this.email      = this.username + '@dispostable.com';
 
     this.password  = 'Abcd@1234';
