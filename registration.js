@@ -13,33 +13,34 @@
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  // Load FakerJS library
-  $.getScript('https://raw.githubusercontent.com/Marak/faker.js/master/build/build/faker.min.js')
+  // Load ChanceJS library
+  $.getScript('https://raw.githubusercontent.com/victorquinn/chancejs/master/chance.js')
     .done(function() {
       fillForm();
     })
     .fail(function() {
-      win.console.error('ERROR: FakerJS not loaded!');
+      win.console.error('ERROR: ChanceJS not loaded!');
     });
 
 
   FormData = function() {
-    this.faker     = faker;
+    this.chance     = chance;
 
-    this.username  = faker.internet.userName().split('.').join('').substring(0,12);
-    this.email     = this.username + '@dispostable.com';
+    alert(chance.string());
+    // this.username  = faker.internet.userName().split('.').join('').substring(0,12);
+    // this.email     = this.username + '@dispostable.com';
 
-    this.password  = 'Abcd@1234';
-    this.firstname = faker.name.firstName();
-    this.lastname  = faker.name.lastName();
-    this.address   = faker.address.streetAddress();
-    this.zip       = '0'+_rand(7001,8989); //Valid GNNJ zip codes
-    this.city      = faker.address.city();
-    this.mobile    = faker.phone.phoneNumberFormat();
-    this.phone     = faker.phone.phoneNumberFormat();
-    this.ssn       = _rand(101,999)+'-'+_rand(11,99)+'-'+_rand(101,999);
+    // this.password  = 'Abcd@1234';
+    // this.firstname = faker.name.firstName();
+    // this.lastname  = faker.name.lastName();
+    // this.address   = faker.address.streetAddress();
+    // this.zip       = '0'+_rand(7001,8989); //Valid GNNJ zip codes
+    // this.city      = faker.address.city();
+    // this.mobile    = faker.phone.phoneNumberFormat();
+    // this.phone     = faker.phone.phoneNumberFormat();
+    // this.ssn       = _rand(101,999)+'-'+_rand(11,99)+'-'+_rand(101,999);
 
-    this.passport  = _rand(10000000000,99999999999);
+    // this.passport  = _rand(10000000000,99999999999);
   };
 
   FormData.prototype.checkCheckbox = function(el) {
@@ -50,25 +51,25 @@
 
 
   fillForm = function() {
-    data = new FormData(win.Faker);
+    data = new FormData(win.Chance);
 
-    $('#registration_username').val(data.username);
-    $('#registration_email').val(data.email);
-    $('#registration_emailConfirmation').val(data.email);
-    $('#registration_password').val(data.password);
-    $('#registration_passwordConfirmation').val(data.password);
-    $('#registration_firstName').val(data.firstname);
-    $('#registration_lastName').val(data.lastname);
-    $('#registration_passport').val(data.passport);
+    // $('#registration_username').val(data.username);
+    // $('#registration_email').val(data.email);
+    // $('#registration_emailConfirmation').val(data.email);
+    // $('#registration_password').val(data.password);
+    // $('#registration_passwordConfirmation').val(data.password);
+    // $('#registration_firstName').val(data.firstname);
+    // $('#registration_lastName').val(data.lastname);
+    // $('#registration_passport').val(data.passport);
 
-    $('#registration_addressStreet').val(data.address);
-    $('#registration_addressZip').val(data.zip);
-    $('#registration_addressCity').val(data.city);
+    // $('#registration_addressStreet').val(data.address);
+    // $('#registration_addressZip').val(data.zip);
+    // $('#registration_addressCity').val(data.city);
 
-    $('#registration_mobilePhone').val(data.mobile);
-    $('#registration_homePhone').val(data.phone);
-    $('#registration_socialSecurityNumber').val(data.ssn);
-    $('#registration_secretResponse').val('Bet');
+    // $('#registration_mobilePhone').val(data.mobile);
+    // $('#registration_homePhone').val(data.phone);
+    // $('#registration_socialSecurityNumber').val(data.ssn);
+    // $('#registration_secretResponse').val('Bet');
 
     // Check all checkboxes
     //$('input[type=checkbox]').each(function() {
