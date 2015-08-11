@@ -26,10 +26,10 @@
   FormData = function() {
     this.chance     = chance;
 
-    this.firstname = chance.first();
-    this.lastname  = chance.last();
+    this.firstname = chance.first() . substring(0,6);
+    this.lastname  = chance.last() . substring(0,6);
 
-    this.username   = this.firstname + this.lastname . substring(0,12);
+    this.username   = this.firstname + this.lastname;
     this.email      = this.username + '@dispostable.com';
 
     this.password  = 'Abcd@1234';
