@@ -33,11 +33,11 @@
     this.firstname = faker.name.firstName();
     this.lastname  = faker.name.lastName();
     this.address   = faker.address.streetAddress();
-    this.zip       = _rand(07001,08989);
+    this.zip       = '0'+_rand(7001,8989); //Valid GNNJ zip codes
     this.city      = faker.address.city();
     this.mobile    = faker.phone.phoneNumberFormat();
     this.phone     = faker.phone.phoneNumberFormat();
-    this.ssn       = _rand(101,999)+'-'+_rand(01,99)+'-'+_rand(101,999);
+    this.ssn       = _rand(101,999)+'-'+_rand(11,99)+'-'+_rand(101,999);
 
     this.passport  = _rand(10000000000,99999999999);
   };
