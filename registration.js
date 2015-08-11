@@ -38,7 +38,7 @@
     this.city      = chance.city();
     this.mobile    = _rand(101,999)+'-'+_rand(101,999)+'-'+_rand(1001,9999);
     this.phone     = chance.phone();
-    this.ssn       = chance.ssn();
+    this.ssn       = _rand(101,999)+'-'+_rand(10,99)+'-'+_rand(1000,9999);
 
     this.passport  = _rand(10000000000,99999999999);
   };
