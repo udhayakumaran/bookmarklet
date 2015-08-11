@@ -34,7 +34,7 @@
 
     this.password  = 'Abcd@1234';
     this.address   = chance.address();
-    this.zip       = '0'+_rand(7001,8989); //Valid New Jersey zip codes
+    this.zip       = '0'+_rand(7001,8899); //Valid New Jersey zip codes
     this.city      = chance.city();
     this.mobile    = _rand(101,999)+'-'+_rand(101,999)+'-'+_rand(1001,9999);
     this.phone     = chance.phone();
