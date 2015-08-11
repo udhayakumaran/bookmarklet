@@ -26,17 +26,18 @@
   FormData = function() {
     this.faker     = faker;
 
-    this.username  = faker.internet.userName().substring(0,12);
+    this.username  = faker.internet.userName().split('.').join('').substring(0,12);
     this.email     = this.username + '@dispostable.com';
 
     this.password  = 'Abcd@1234';
     this.firstname = faker.name.firstName();
     this.lastname  = faker.name.lastName();
     this.address   = faker.address.streetAddress();
-    this.zip       = faker.address.zipCode();
+    this.zip       = _rand(07001,08989);
     this.city      = faker.address.city();
     this.mobile    = faker.phone.phoneNumberFormat();
     this.phone     = faker.phone.phoneNumberFormat();
+    this.ssn       = _rand(101,999)+'-'+_rand(01,99)+'-'+_rand(101,999);
 
     this.passport  = _rand(10000000000,99999999999);
   };
@@ -66,12 +67,13 @@
 
     $('#registration_mobilePhone').val(data.mobile);
     $('#registration_homePhone').val(data.phone);
+    $('#registration_socialSecurityNumber').val(data.ssn);
     $('#registration_secretResponse').val('Bet');
 
     // Check all checkboxes
-    $('input[type=checkbox]').each(function() {
-      data.checkCheckbox(this);
-    });
+    //$('input[type=checkbox]').each(function() {
+    //  data.checkCheckbox(this);
+    //});
 
   };
 
