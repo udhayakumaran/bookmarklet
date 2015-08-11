@@ -34,9 +34,9 @@
 
     this.password  = 'Abcd@1234';
     this.address   = chance.address();
-    this.zip       = '0'+_rand(7001,8989); //Valid GNNJ zip codes
+    this.zip       = '0'+_rand(7001,8989); //Valid New Jersey zip codes
     this.city      = chance.city();
-    this.mobile    = chance.phone({ country: "us", mobile: true });
+    this.mobile    = _rand(101,999)+'-'+_rand(101,999)+'-'+_rand(1001,9999);
     this.phone     = chance.phone();
     this.ssn       = chance.ssn();
 
@@ -69,6 +69,7 @@
     $('#registration_mobilePhone').val(data.mobile);
     $('#registration_homePhone').val(data.phone);
     $('#registration_socialSecurityNumber').val(data.ssn);
+    $('#registration_socialSecurityNumberConfirmation').val(data.ssn);
     $('#registration_secretResponse').val('Bet');
 
     // Check all checkboxes
