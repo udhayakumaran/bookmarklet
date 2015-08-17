@@ -47,7 +47,7 @@
   FormData.prototype.checkCheckbox = function(el) {
     var $el  = $(el);
 
-    $el.prop('checked', true);
+    $el.prop('checked', true).focus().blur();
   };
 
 
@@ -74,9 +74,9 @@
     $('#registration_secretResponse').val('Bet').focus().blur();
 
     // Check all checkboxes
-    //$('input[type=checkbox]').each(function() {
-    //  data.checkCheckbox(this);
-    //});
+    $('input[type=checkbox]').each(function() {
+      data.checkCheckbox(this);
+    });
 
   };
 
