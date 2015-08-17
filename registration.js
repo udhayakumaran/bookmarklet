@@ -54,24 +54,24 @@
   fillForm = function() {
     data = new FormData(win.Chance);
 
-    $('#registration_username').val(data.username);
-    $('#registration_email').val(data.email);
-    $('#registration_emailConfirmation').val(data.email);
-    $('#registration_password').val(data.password);
-    $('#registration_passwordConfirmation').val(data.password);
-    $('#registration_firstName').val(data.firstname);
-    $('#registration_lastName').val(data.lastname);
-    $('#registration_passport').val(data.passport);
+    $('#registration_username').val(data.username).focus().blur();
+    $('#registration_email').val(data.email).focus().blur();
+    $('#registration_emailConfirmation').val(data.email).focus().blur();
+    $('#registration_password').val(data.password).focus().blur();
+    $('#registration_passwordConfirmation').val(data.password).focus().blur();
+    $('#registration_firstName').val(data.firstname).focus().blur();
+    $('#registration_lastName').val(data.lastname).focus().blur();
+    $('#registration_passport').val(data.passport).focus().blur();
 
-    $('#registration_addressStreet').val(data.address);
-    $('#registration_addressZip').val(data.zip);
-    $('#registration_addressCity').val(data.city);
+    $('#registration_addressStreet').val(data.address).focus().blur();
+    $('#registration_addressZip').val(data.zip).focus().blur();
+    $('#registration_addressCity').val(data.city).focus().blur();
 
-    $('#registration_mobilePhone').val(data.mobile);
-    $('#registration_homePhone').val(data.phone);
-    $('#registration_socialSecurityNumber').val(data.ssn);
-    $('#registration_socialSecurityNumberConfirmation').val(data.ssn);
-    $('#registration_secretResponse').val('Bet');
+    $('#registration_mobilePhone').val(data.mobile).focus().blur();
+    $('#registration_homePhone').val(data.phone).focus().blur();
+    $('#registration_socialSecurityNumber').val(data.ssn).focus().blur();
+    $('#registration_socialSecurityNumberConfirmation').val(data.ssn).focus().blur();
+    $('#registration_secretResponse').val('Bet').focus().blur();
 
     // Check all checkboxes
     //$('input[type=checkbox]').each(function() {
