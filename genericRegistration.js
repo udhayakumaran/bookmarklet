@@ -2,10 +2,9 @@ getScript('https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', fu
   var formsCollection = $('form');
   for(var i=0;i<formsCollection.length;i++)
   {
-    console.log(formsCollection[i].find('input'));
+    console.log(formsCollection[i].id);
   }
 });
-
 
 function getScript(source, callback) {
     var script = document.createElement('script');
