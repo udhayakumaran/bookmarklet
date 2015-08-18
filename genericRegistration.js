@@ -1,8 +1,12 @@
 getScript('https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', function(){
-  var formsCollection = $('form');
-  for(var i=0;i<formsCollection.length;i++)
-  {
-    console.log(formsCollection[i].id);
+  var forms = $('form');
+  for(var i=0;i<forms.length;i++)
+  { 
+    $("form#"+forms[i].id+" :input:visible").each(function() {
+      if ($(this).css('visibility') !== 'hidden' && $(this).css('opacity') != 0) {
+        console.log($(this));
+      }
+    });
   }
 });
 
