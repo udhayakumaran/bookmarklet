@@ -4,7 +4,8 @@ getScript('https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', fu
   { 
     $("form#"+forms[i].id+" :input:visible").each(function() {
       if ($(this).css('visibility') !== 'hidden' && $(this).css('opacity') != 0) {
-        console.log($(this)+'--'+$(this).prop('type'));
+        console.log($(this));
+        console.log($(this).prop('type'));
       }
     });
   }
