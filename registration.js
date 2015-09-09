@@ -14,7 +14,7 @@
   };
 
   // Load ChanceJS library
-  $.getScript('https://cdn.rawgit.com/victorquinn/chancejs/master/chance.js')
+  $.getScript('https://raw.githubusercontent.com/victorquinn/chancejs/0.7.7/chance.js')
     .done(function() {
       fillForm();
     })
